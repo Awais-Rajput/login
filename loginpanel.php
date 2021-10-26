@@ -30,6 +30,7 @@ if($un =='username' && $pw =='password')
 {
 
    header(location:'home.php');
+    exit();
    
 }
 
@@ -46,7 +47,7 @@ error_reporting(0);
 
 ?>
 
-<a href="home.html"></a>
+
 
     
 </body>
