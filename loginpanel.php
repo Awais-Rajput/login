@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Panel</title>
 </head>
-<body>  
-<form method="post" >
+<body> 
 
-Username<input type="text" name="username" placeholder="Inter Username"  required>
+<form method="post">
+
+Username<input type="text" name="username" placeholder="Enter Username"  required>
 <br>
 
-Password<input type="password" name="password" placeholder="Inter Password" required>
+Password<input type="password" name="password" placeholder="Enter Password" required>
 
 <input type="submit" name="btn" value="sub">
 
@@ -23,32 +24,25 @@ Password<input type="password" name="password" placeholder="Inter Password" requ
 if(isset($_POST['btn']))
 {
 
-$un = $_POST["username"];
-$pw = $_POST["password"];
+$un = $_POST['username'];
+$pw = $_POST['password'];
 
-if($un =='username' && $pw =='password')    
+if($un == "admin" && $pw == "123")    
 {
 
-   header(location:'home.php');
-    exit();
+   echo "<script>window.open('home.php','_self') </script>";
    
 }
 
-else
+else{
 
-    echo "invalid username/password"; 
 
+echo "invalid username/password"; 
 
 }
-
-error_reporting(0);
-
-
+}
 
 ?>
-
-
-
     
 </body>
 </html>
